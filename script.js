@@ -136,14 +136,34 @@ addressInput.addEventListener("input", function(event){
 
 })
 
-//Força a digitação do endereço antes de avançar
+//Finalizando Pedido
 checkoutBtn.addEventListener("click", function(){
+    //Verifica se ta aberto
+    const isOpen = checkRestaurantOpen();
+    if(!isOpen){
+        alert("RESTAURANTE FECHADO NO MOMENTO!")
+        return;
+    }
+
+    //Verifica se digitou o endereço antes de avançar
     if(cart.length === 0) return;
     if(addressInput.value === ""){
         addressWarn.classList.remove("hidden")
         addressInput.classList.add("border-red-500")
         return;
     }
+
+    //Envia o pedido para o wpp
+    const cartItems = cart.map((item) => {
+        return(
+            `${item.name} Quantidade: (${item.quantity}) Preço: R$${item.price} |`
+        )
+    }).join("")
+
+    const message = encodeURIComponent(cartItems)
+    const phone = "85985646542"
+
+    window.open(`https://wa.me/${phone}?text=${message} Endereço: ${addressInput.value}`,"_blank")
 })
 
 
