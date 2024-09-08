@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Biblioteca de avidos toastify-js-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <!--Font Poppins-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +18,7 @@
 </head>
 <body>
     <!--Inicio header-->
-    <header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center">
+    <header class="w-full h-[320px] bg-zinc-900 bg-home bg-cover bg-center">
         <div class="w-full h-full flex flex-col justify-center items-center">
             <img 
             src="./assets/hamb-1.png" 
@@ -28,7 +30,7 @@
             <span class="text-white font-medium">Rua devTec 2024, Fortaleza - CE</span>
         
             <div class="bg-green-600 px-4 py-1 rounded-lg mt-5" id="date-span">
-                <span class="text-white font-medium">Seg á Dom - 18:00 as 22:00</span>
+                <span class="text-white font-medium">Seg á Dom - 10:00 as 22:00</span>
             </div>
         </div>
     </header>
@@ -40,6 +42,13 @@
 
     <!--Inicio Menu-->
     <div id="menu">
+        <!--Hambúrgueres-->
+        <div class="mx-auto max-w-7xl px-2 my-2">
+            <h2 class="font-bold text-3xl">
+                Hambúrgueres
+            </h2>
+        </div>
+
         <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10  mx-auto max-w-7xl px-2 mb-16">
             <!--produto1-->
             <div class="flex gap-2">
@@ -129,6 +138,106 @@
             </div>
             <!--Fim produto4-->
         </main>
+        <!-- Fim Hambúrgueres-->
+
+        <!--Calzones-->
+        <div class="mx-auto max-w-7xl px-2 my-2">
+            <h2 class="font-bold text-3xl">
+                Calzones
+            </h2>
+        </div>
+
+        <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10  mx-auto max-w-7xl px-2 mb-16">
+            <!--produto1-->
+            <div class="flex gap-2">
+                <img src="./assets/Calzone.jpg" 
+                alt="Calzone de Frango"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+                <div>
+                    <p class="font-bold">Frango</p>
+                    <p class="text-sm">Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                    <div class="mt-3 flex items-center gap-2 justify-between">
+                        <p class="font-bold text-lg">R$ 11.90</p>
+                        <button 
+                        class="bg-gray-900 px-5 rounded add-to-card-btn"
+                        data-name="Calzone de Frango"
+                        data-price="11.90">
+                            <i class="fa fa-cart-plus text-lg text-white" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--Fim produto1-->
+            
+            <!--produto2-->
+            <div class="flex gap-2">
+                <img src="./assets/Calzone.jpg" 
+                alt="Kalzone de Calabresa"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+                <div>
+                    <p class="font-bold">Calabresa</p>
+                    <p class="text-sm">Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                    <div class="mt-3 flex items-center gap-2 justify-between">
+                        <p class="font-bold text-lg">R$ 11.90</p>
+                        <button 
+                        class="bg-gray-900 px-5 rounded add-to-card-btn"
+                        data-name="Kalzone de Calabresa"
+                        data-price="11.90">
+                            <i class="fa fa-cart-plus text-lg text-white" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--Fim produto2-->
+            
+            <!--produto3-->
+            <div class="flex gap-2">
+                <img src="./assets/Calzone.jpg" 
+                alt="Kalzone de Filé Mignon"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+                <div>
+                    <p class="font-bold">Filé Mignon</p>
+                    <p class="text-sm">Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                    <div class="mt-3 flex items-center gap-2 justify-between">
+                        <p class="font-bold text-lg">R$ 15.90</p>
+                        <button 
+                        class="bg-gray-900 px-5 rounded add-to-card-btn"
+                        data-name="Kalzone de Filé Mignon"
+                        data-price="15.90">
+                            <i class="fa fa-cart-plus text-lg text-white" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--Fim produto3-->
+
+            <!--produto4-->
+            <div class="flex gap-2">
+                <img src="./assets/Calzone.jpg" 
+                alt="Kalzone de Camarão Catupiry"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+                <div>
+                    <p class="font-bold">Camarão Catupiry</p>
+                    <p class="text-sm">Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                    <div class="mt-3 flex items-center gap-2 justify-between">
+                        <p class="font-bold text-lg">R$ 15.90</p>
+                        <button 
+                        class="bg-gray-900 px-5 rounded add-to-card-btn"
+                        data-name="Kalzone de Camarão Catupiry"
+                        data-price="15.90">
+                            <i class="fa fa-cart-plus text-lg text-white" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--Fim produto4-->
+        </main>
+        <!--Fim Calzones-->
+        
 
         <div class="mx-auto max-w-7xl px-2 my-2">
             <h2 class="font-bold text-3xl">
@@ -183,8 +292,11 @@
 
         </div>
         <!--Fim Grid Babidas-->
+
     </div>
     <!--Fim Menu-->
+
+
 
     <!--Modal Cart-->
     <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden"
@@ -222,7 +334,8 @@
         </button>
     </footer>
 
-
+    <!--Biblioteca de avidos toastify-js-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <!--JavaScript-->
     <script type="text/javascript" src="./script.js"></script>
 </body>
